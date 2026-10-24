@@ -1,36 +1,56 @@
-# 🧠 TaughtAI Support Assistant — Demo Chatbot
+<h1 align="center">🎓 TaughtAI Support Assistant</h1>
 
-This project is a **demo chatbot** created to showcase how TaughtAI's **custom GPTs** can be integrated into a website. The assistant is designed for educators and school staff, delivering trauma-informed, inclusive guidance for supporting students with **SEMH**, **SEND**, **ASD**, **ADHD**, and **trauma backgrounds**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OpenAI-GPT-412991?style=for-the-badge&logo=openai&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pinecone-Vector%20DB-00b39e?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Live-taughtai.app-success?style=for-the-badge"/>
+</p>
 
-📌 **Note:** This is a single-bot demo for evaluation purposes. The client (TaughtAI) has 6 separate custom GPTs currently hosted within ChatGPT. This demo simulates how one of them would function independently when integrated into a custom frontend/backend environment.
-
----
-
-## 🔧 Key Features
-
-- ✅ PDF ingestion and vectorization with `pdfplumber`, `OpenAI Embeddings`, and `Pinecone`
-- ✅ FastAPI backend for frontend integration
-- ✅ Context-aware support responses tailored to SEND/SEMH practices
-- ✅ Removes personally identifiable information from queries
-- ✅ Follows specific school policies: **Behaviour**, **Safeguarding**, **SEND**, **Communication**
-
----
-
-## 📦 Requirements
-
-- Python 3.8+
-- `openai`
-- `langchain`
-- `pinecone-client`
-- `pdfplumber`
-- `fastapi`
-- `uvicorn`
-- `python-dotenv`
+<p align="center">
+  AI support assistant for the TaughtAI platform — providing intelligent student support,
+  answering curriculum questions, and guiding learners through educational content.
+  Powers <a href="https://taughtai.app">taughtai.app</a>.
+</p>
 
 ---
 
-## 📚 Future Integration
+## ✨ Features
+- **Multi-School Support** — Taught AI Academy, Primary School, Special School
+- **Curriculum-Aware** — answers based on uploaded course materials
+- **Student Guidance** — lesson navigation and quiz assistance
+- **Teacher Controls** — teachers manage knowledge base via document upload
+- **Secure Login** — role-based access (Admin / Teacher / Student)
 
-- ✅ This demo shows how **one GPT** functions outside ChatGPT.
-- 🚀 For full integration, each of the **6 custom GPTs** will have its own endpoint or configuration within the TaughtAI platform.
-- 🌐 Frontend team can use this as the backend blueprint for embedding the assistant into the web interface.
+---
+
+## 🏗️ Architecture
+
+```
+Student Query
+    │
+    ▼
+Query Embedding (OpenAI)
+    │
+    ▼
+Pinecone Vector Search
+(retrieve relevant curriculum content)
+    │
+    ▼
+GPT-4 / Gemini Response Generation
+(grounded in retrieved content)
+    │
+    ▼
+School-specific answer returned
+```
+
+---
+
+## 🛠️ Tech Stack
+**Python** · **OpenAI GPT** · **Google Gemini** · **Pinecone** · **Django** · **AWS** · **GCP**
+
+---
+
+## 👩‍💻 Author
+**Ramisa Sharar Nidhi** — AI Developer (AI Layer) @ JVAI / Betopia Group
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-ramisashararnidhi-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/ramisashararnidhi)
